@@ -25,4 +25,10 @@ class WebhookController() {
     fun postWebhook(@RequestBody request: WebhookRequest) {
         println(request.toString())
     }
+
+//    @PostMapping
+//    @ResponseBody
+//    fun post(@RequestBody param: Param): String {
+//        return param.toString()
+//    }
 }
