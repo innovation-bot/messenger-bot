@@ -7,4 +7,6 @@ data class WebhookRequest(val entry: List<Entry>)
 
 data class Entry(val id: String, val time: Long, val messaging: List<Messaging>)
 
-class Messaging()
+data class Messaging(val message: Message)
+
+class Message(val text: String)

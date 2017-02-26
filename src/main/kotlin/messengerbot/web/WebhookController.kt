@@ -24,6 +24,7 @@ class WebhookController() {
     @PostMapping
     fun postWebhook(@RequestBody request: WebhookRequest) {
         println(request.toString())
+        println(request.entry[0].messaging[0])
     }
 
 //    @PostMapping
