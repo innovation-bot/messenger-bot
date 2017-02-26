@@ -11,14 +11,20 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController("/webhook")
 class WebhookController() {
+    val VALIDATION_TOKEN: String = "hogehoge"
 
     @GetMapping
     fun getWebhook(
-            @RequestParam("hub.model") model: String,
+            @RequestParam("hub.mode") mode: String,
             @RequestParam("hub.verify_token") verifyToken: String,
             @RequestParam("hub.challenge") challenge: String
     ): String {
-       return challenge
+        if (mode.equals("subscribe") && verifyToken.equals(VALIDATION_TOKEN)) {
+            return challenge
+        } else {
+
+        }
+
     }
 
     @PostMapping
