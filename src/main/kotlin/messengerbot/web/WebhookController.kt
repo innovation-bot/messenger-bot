@@ -22,7 +22,7 @@ class WebhookController() {
         if (mode.equals("subscribe") && verifyToken.equals(VALIDATION_TOKEN)) {
             return challenge
         } else {
-
+            return challenge
         }
 
     }
