@@ -1,10 +1,7 @@
 package messengerbot.web
 
 import jdk.nashorn.internal.runtime.logging.Logger
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestParam
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController("/webhook")
 class WebhookController() {
@@ -25,7 +22,7 @@ class WebhookController() {
     }
 
     @PostMapping
-    fun postWebhook(@RequestParam request: WebhookRequest) {
+    fun postWebhook(@RequestBody request: WebhookRequest) {
         println(request.toString())
     }
 }
