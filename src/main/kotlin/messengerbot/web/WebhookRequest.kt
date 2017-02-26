@@ -3,8 +3,8 @@ package messengerbot.web
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.annotation.JsonProperty
 
-data class WebhookRequest(val entry: List<Entry>)
+data class WebhookRequest(var entry: List<Entry>)
 
-data class Entry(val id: String, val time: Long, val messaging: Messaging)
+data class Entry(var id: String, var time: Long, var messaging: Messaging)
 
-data class Messaging(val message: String)
+data class Messaging(var message: String)
